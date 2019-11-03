@@ -1,0 +1,19 @@
+<section class="container">
+  <div class="promotion">
+    <label for="promo-code">Have A Promo Code?</label>
+    <input type="text" #promoCode (keydown.enter)="inputPromoCode(promoCode)" /> <button type="button"></button>
+  </div>
+
+  <div class="summary">
+    <ul>
+      <li>Subtotal <span>{{subTotal | currency : 'VND' : 'symbol-narrow': '1.0-0' : 'VN'}}</span></li>
+      <li>Tax <span>{{tax | currency : 'VND' : 'symbol-narrow': '1.0-0' : 'VN'}}</span></li>
+      <li>Discount <span>{{discount | currency : 'VND' : 'symbol-narrow': '1.0-0' : 'VN'}}</span></li>
+      <li class="total">Total <span>{{total | currency : 'VND' : 'symbol-narrow': '1.0-0' : 'VN'}}</span></li>
+    </ul>
+  </div>
+
+  <div class="checkout">
+    <button type="button">Check Out</button>
+  </div>
+</section>
